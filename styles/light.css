@@ -1,18 +1,10 @@
 .page.theme_light {
   --title-color: #FFC2E6;
-<<<<<<< HEAD
   --text-color: #353430;
   --sub-text-color: #353430;
   --accent-color: #ff8dcb;
   --btn-color:#353430;
   --backgroung-image: url(../images/cover-image-light.png);
-=======
-  --sub-text-color: #353430;
-  --backgroung-image: url(../images/cover-image-light.png);
-  --text-color: #353430;
-  --btn-color: #353430;
-  --accent-color: #FF8DCB;
->>>>>>> 8fe1f79657cfe5b98feee1020df7bd797a5f7fc6
 }
 
 .theme-light .header__rec {
