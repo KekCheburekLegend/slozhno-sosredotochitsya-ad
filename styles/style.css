@@ -104,7 +104,7 @@
 }
 
 .header__title {
-  margin-left: -30px;
+  margin-left: -20px;
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--acnt-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -145,6 +145,7 @@
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--acnt-color);
 }
+
 
 .link:hover { 
   border-bottom: 1px solid var(--text-color);

@@ -8,17 +8,5 @@
   --bg-img: url(../images/cover-image-dark.png);
   --text-color: #F1B2CE;
   --btn-color: #FF0070;
-  --acnt-color: #ff0070;
-}
-
-.theme-dark .page {
-    --font: 'IBM Plex mono';
-  --font-size: 18px;
-  --title-color: #DB00FF;
-  --sb-text-color: #000028;
-  --bg-img: url(../images/cover-image-dark.png);
-  --text-color: #F1B2CE;
-  --btn-color: #FF0070;
-
-  --acnt-color: #ff0070;
+  --acnt-color: #FF0070;
 }
