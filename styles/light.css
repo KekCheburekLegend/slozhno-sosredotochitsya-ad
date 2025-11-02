@@ -4,11 +4,11 @@
   --font: 'IBM Plex mono';
   --font-size: 18px;
   --title-color: #FFC2E6;
-  --sb-text-color: #353430;
-  --bg-img: url(../images/cover-image-light.png);
+  --sub-text-color: #353430;
+  --backgroung-image: url(../images/cover-image-light.png);
   --text-color: #353430;
   --btn-color: #353430;
-  --acnt-color: #FF8DCB;
+  --accent-color: #FF8DCB;
 }
 
 .theme-light .header__rec {
