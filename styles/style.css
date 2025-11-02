@@ -1,24 +1,29 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  max-width: 1024px;
   margin: 0 auto;
   font-family: var(--font, monospace);
   font-size: var(--font-size);
   font-weight: 400;
   line-height: 23.4px;
-  background-image: var(--bg-img);
+    background-image: var(--bg-img);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .header {
-  min-block-size: 100vh;
+  min-block-size: 105vh;
   padding: 20px;
   display: grid;
   position: relative;
   grid-template-rows: 1fr min-content 1fr;
-
+  background-image: var(--bg-img);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header__theme-menu-list {
@@ -62,7 +67,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: rgba(255, 0, 112, 1);
+  color:  var(--btn-color);
   text-align: center;
   padding-right: 8px;
   margin: 20px;
@@ -130,7 +135,7 @@
 .section__title {
   color: var(--btn-color);
   font-weight: 700;
-  line-height: 130%;
+  line-height: 23.4px;
   font-size: var(--font-size);
 }
 
@@ -145,9 +150,7 @@
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--acnt-color);
 }
-
-
-.link:hover { 
+.link:hover {
   border-bottom: 1px solid var(--text-color);
 }
 
@@ -164,6 +167,7 @@
   grid-template-columns: 33% 67%;
   padding-block-start: 60px;
   margin: 0 20px;
+  gap: 20px;
  }
 
  .content {
@@ -194,7 +198,7 @@
 }
 
 .card__title {
-  margin-block-end: 10px;
+  margin-block-end: 20px;
 }
 
 
@@ -260,7 +264,7 @@
 }
 
 .footer {
-  min-block-size: 100vh;
+  min-block-size: 105vh;
   padding: 20px;
   position: relative;
   display: flex;
@@ -330,7 +334,7 @@
   }
 }
 
-@media (max-width:560px) {
+@media (max-width:375px) {
  .header {
   padding: 10px;
 }
@@ -355,9 +359,9 @@
 
 .concentration {
   margin: 0 10px;
-  padding-block-start: 50px;
+  padding-block-start: 60px;
   padding-inline-end: 0;
-  padding-block-end: 50px;
+  padding-block-end: 80px;
 }
 
 .concentration .section__title {
