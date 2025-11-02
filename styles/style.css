@@ -1,29 +1,23 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  max-width: 1024px;
   margin: 0 auto;
   font-family: var(--font, monospace);
   font-size: var(--font-size);
   font-weight: 400;
   line-height: 23.4px;
-    background-image: var(--bg-img);
+  background-image: var(--backgroung-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
 .header {
-  min-block-size: 105vh;
+ min-block-size: 100vh;
   padding: 20px;
   display: grid;
   position: relative;
   grid-template-rows: 1fr min-content 1fr;
-  background-image: var(--bg-img);
-  background-position: bottom;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .header__theme-menu-list {
@@ -33,11 +27,11 @@
 }
 
 .header__theme-menu-button {
-  background-color: transparent;
-  padding: 1.5px 13px;
+  padding: 0 13px;
   color: var(--btn-color);
-  border: none;
   text-align: center;
+  border: none;
+  background: transparent;
 }
 
 .header__theme-menu-button_active {
@@ -60,16 +54,16 @@
 
 .header__rec {
   position: absolute;
-  text-transform: uppercase;
   top: 0;
   right: 0;
   content: "";
   display: flex;
   align-items: center;
   gap: 10px;
-  color:  var(--btn-color);
+  color: var(--btn-color);
   text-align: center;
   padding-right: 8px;
+  text-transform: uppercase;
   margin: 20px;
 }
 
@@ -79,9 +73,9 @@
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  background-color: var(--acnt-color);
-  fill: var(--acnt-color);
-  filter: drop-shadow(0px 0px 4px var(--acnt-color));
+  background-color: var(--accent-color);
+  fill: var(--accent-color);
+  filter: drop-shadow(0px 0px 4px var(--accent-color));
 }
 
 .decorated-zone::before {
@@ -91,7 +85,7 @@
   content: "";
   border-top: 1px solid var(--btn-color);
   border-right: 1px solid var(--btn-color);
-  inline-size: 25px; /*максимальный размер в зависимости написания текста*/
+  inline-size: 25px;
   block-size: 25px;
   margin: 20px;
 }
@@ -110,30 +104,30 @@
 
 .header__title {
   margin-left: -20px;
-  color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--acnt-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  color: var(--title-color);
   font-weight: 700;
   line-height: 82.5%;
 }
 
 .header__text {
-  max-inline-size: 491px; /*максимальный размер элемента по строчной оси в зависимости написания текста*/
-  max-block-size: 71px; /*в зависимости орентации (выбирает (если ширина > иначе высота))*/
+  max-inline-size: 491px;
+  max-block-size: 71px;
   justify-self: end;
   align-self: center;
 }
 
 .title-decor {
   font-weight: 700;
-  background-color: var(--acnt-color);
+  background-color: var(--accent-color);
   font-size: var(--font-size);
   line-height: 23.4px;
-  color: var(--sb-text-color);
+  color: var(--sub-text-color);
 }
 
 .section__title {
-  color: var(--btn-color);
+color: var(--btn-color);
   font-weight: 700;
   line-height: 23.4px;
   font-size: var(--font-size);
@@ -148,7 +142,7 @@
 
 .link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--acnt-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 .link:hover {
   border-bottom: 1px solid var(--text-color);
@@ -164,10 +158,9 @@
 
  .reasons {
   display: grid;
-  grid-template-columns: 33% 67%;
+  grid-template-columns: 34% 66%;
   padding-block-start: 60px;
   margin: 0 20px;
-  gap: 20px;
  }
 
  .content {
@@ -176,7 +169,7 @@
   gap: 10px;
  }
  
-.content + p {
+.content  p:first-of-type {
   padding-block-end: 10px;
 }
 
@@ -234,8 +227,7 @@
   margin: 0 20px;
   display: grid;
   gap: 20px;
-  grid-area: inherit;
-  grid-auto-flow: dense;
+  grid-template-areas: inherit;
 }
 
 .gallery__image {
@@ -255,8 +247,12 @@
 }
 
 .gallery__image:nth-of-type(3) {
-  grid-column: 1/2;
   grid-row: 2/4;
+}
+
+.gallery__image:nth-of-type(4) {
+  grid-column: 2/3;
+  grid-row: 1/3;
 }
 
 .gallery__image:nth-of-type(5) {
@@ -264,7 +260,7 @@
 }
 
 .footer {
-  min-block-size: 105vh;
+  min-block-size: 100vh;
   padding: 20px;
   position: relative;
   display: flex;
@@ -273,8 +269,8 @@
 }
 
 .footer__title {
-  text-shadow: 4px 4px 0 var(--acnt-color);
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   color: var(--title-color);
   font-weight: 700;
   line-height: 82.5%;
@@ -334,7 +330,7 @@
   }
 }
 
-@media (max-width:375px) {
+@media (max-width:565px) {
  .header {
   padding: 10px;
 }
