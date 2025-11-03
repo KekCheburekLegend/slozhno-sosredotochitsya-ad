@@ -34,7 +34,7 @@
 
 .header__theme-menu-button {
   background-color: transparent;
-  padding: 1.5px 13px;
+  padding: 0 13px;
   color: var(--btn-color);
   border: none;
   text-align: center;
