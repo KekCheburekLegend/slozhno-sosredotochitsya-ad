@@ -1,30 +1,26 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  max-width: 1024px;
   margin: 0 auto;
   font-family: var(--font, monospace);
   font-size: var(--font-size);
   font-weight: 400;
   line-height: 23.4px;
-    background-image: var(--bg-img);
+  background-image: var(--backgroung-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
+/*Шапка*/
+
 .header {
-  min-block-size: 105vh;
+ min-block-size: 100vh;
   padding: 20px;
   display: grid;
   position: relative;
   grid-template-rows: 1fr min-content 1fr;
-  background-image: var(--bg-img);
-  background-position: bottom;
-  background-size: cover;
-  background-attachment: fixed;
 }
+
+/*Кнопки навигации*/
 
 .header__theme-menu-list {
   display: flex;
@@ -33,20 +29,22 @@
 }
 
 .header__theme-menu-button {
+<<<<<<< HEAD
   background-color: transparent;
+=======
+>>>>>>> be0f649a1399b2f827b5921db26302c969900e97
   padding: 0 13px;
   color: var(--btn-color);
-  border: none;
   text-align: center;
+  border: none;
+  background: transparent;
 }
+
+/*Действия на кнопки*/
 
 .header__theme-menu-button_active {
   pointer-events: none;
   border: 1px solid var(--btn-color);
-}
-
-.header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
 }
 
 .header__theme-menu-button:focus {
@@ -57,46 +55,54 @@
   border-bottom: 1px solid var(--btn-color);
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+  cursor: pointer;
+}
 
-.header__rec {
+/*РЕС*/
+
+.decorative__element {
   position: absolute;
-  text-transform: uppercase;
   top: 0;
   right: 0;
   content: "";
   display: flex;
   align-items: center;
   gap: 10px;
-  color:  var(--btn-color);
+  color: var(--btn-color);
   text-align: center;
   padding-right: 8px;
+  text-transform: uppercase;
   margin: 20px;
 }
 
-.header__rec::after {
+.decorative__element::after {
   display: block;
   content: "";
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  background-color: var(--acnt-color);
-  fill: var(--acnt-color);
-  filter: drop-shadow(0px 0px 4px var(--acnt-color));
+  background-color: var(--accent-color);
+  fill: var(--accent-color);
+  filter: drop-shadow(0px 0px 4px var(--accent-color));
 }
 
-.decorated-zone::before {
+/* Стили углов*/
+
+.frame::before {
   position: absolute;
   top: 0;
   right: 0;
   content: "";
   border-top: 1px solid var(--btn-color);
   border-right: 1px solid var(--btn-color);
-  inline-size: 25px; /*максимальный размер в зависимости написания текста*/
+  inline-size: 25px;
   block-size: 25px;
   margin: 20px;
 }
 
-.decorated-zone::after {
+.frame::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -108,163 +114,189 @@
   margin: 20px;
 }
 
+/*Заголовок шапки*/
+
 .header__title {
   margin-left: -20px;
-  color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--acnt-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  color: var(--title-color);
   font-weight: 700;
   line-height: 82.5%;
 }
 
+.title-decor {
+  font-weight: 700;
+  background-color: var(--accent-color);
+  font-size: var(--font-size);
+  line-height: 23.4px;
+  color: var(--sub-text-color);
+}
+
 .header__text {
-  max-inline-size: 491px; /*максимальный размер элемента по строчной оси в зависимости написания текста*/
-  max-block-size: 71px; /*в зависимости орентации (выбирает (если ширина > иначе высота))*/
+  max-inline-size: 491px;
+  max-block-size: 71px;
   justify-self: end;
   align-self: center;
 }
 
 .title-decor {
   font-weight: 700;
-  background-color: var(--acnt-color);
+  background-color: var(--accent-color);
   font-size: var(--font-size);
   line-height: 23.4px;
-  color: var(--sb-text-color);
+  color: var(--sub-text-color);
 }
 
 .section__title {
-  color: var(--btn-color);
+color: var(--btn-color);
   font-weight: 700;
   line-height: 23.4px;
   font-size: var(--font-size);
 }
 
-.content__text,
-.card__text,
-.tip__text {
+.section__title--narrow {
+  max-inline-size: 315px;
+}
+
+.section__subtitle {
+  margin-bottom: 10px;
+}
+
+.section__text {
   font-size: var(--font-size);
   color: var(--text-color);
 }
 
-.link {
+.section__link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--acnt-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
-.link:hover {
+
+.section__link:hover {
   border-bottom: 1px solid var(--text-color);
 }
 
-.link:focus {
+.section__link:focus {
   outline: none;
 }
 
-.link:focus-visible {
+.section__link:focus-visible {
   border: 1px solid var(--text-color);
 }
 
  .reasons {
   display: grid;
-  grid-template-columns: 33% 67%;
+  grid-template-columns: 34% 66%;
   padding-block-start: 60px;
   margin: 0 20px;
-  gap: 20px;
  }
 
- .content {
+.section--why {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  padding-block-start: 60px;
+}
+
+.section__content {
   display: flex;
   flex-direction: column;
   gap: 10px;
  }
  
-.content + p {
+.content  p:first-of-type {
   padding-block-end: 10px;
 }
 
-.concentration {
+/*Вторая секция с вопросами*/
+
+.section--distractions {
   padding-block-start: 80px;
   padding-block-end: 80px;
-  margin: 0 20px;
 }
 
-.concentration__content {
+.section__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding-block-start: 20px;
 }
 
-.concentration .section__title {
-  max-inline-size: 315px;
+.section__card {
+  display: flex;
+  flex-direction: column;
 }
 
-.card__title {
-  margin-block-end: 20px;
-}
+/*Третья секция с вопросами*/
 
-
-.tips {
+.section--solutions {
   display: grid;
   grid-template-columns: 34% 66%;
   padding-block-end: 80px;
-  margin: 0 20px;
 }
 
-.tip__title {
+.section__tip {
+  margin-bottom: 20px;
+}
+
+.section__tip-title {
   font-weight: 400;
 }
 
-.tips__content {
-  display: grid;
-  gap: 20px;
+.section__tip:last-child {
+  margin-bottom: 0;
 }
 
-.tip__text {
-  padding-block-start: 10px;
-}
+/*Секция с картинками*/
 
-.gallery {
+.section--gallery {
   padding-block-end: 60px;
 }
 
-.gallery__title {
-  margin: 0 20px 20px 20px;
-}
-
-.gallery__content {
-  margin: 0 20px;
+.gallery {
+  margin-top: 20px;
   display: grid;
   gap: 20px;
-  grid-area: inherit;
-  grid-auto-flow: dense;
+  grid-template-areas: inherit;
 }
 
-.gallery__image {
+.gallery__item {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.gallery__image:nth-of-type(1) {
-  grid-column: 1/3;
+.gallery__item:first-of-type {
+  grid-column: 1 / 3;
 }
 
-.gallery__image:nth-of-type(2) {
-  grid-column: 3/4;
-  grid-row: 1/3;
+.gallery__item:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 }
 
 .gallery__image:nth-of-type(3) {
-  grid-column: 1/2;
   grid-row: 2/4;
+}
+
+.gallery__image:nth-of-type(4) {
+  grid-column: 2/3;
+  grid-row: 1/3;
 }
 
 .gallery__image:nth-of-type(5) {
   grid-column: 2/4;
 }
 
+.gallery__item:last-of-type {
+  grid-column: 2 / 4;
+}
+
+/*Подвал*/
+
 .footer {
-  min-block-size: 105vh;
+  min-block-size: 100vh;
   padding: 20px;
   position: relative;
   display: flex;
@@ -273,13 +305,14 @@
 }
 
 .footer__title {
-  text-shadow: 4px 4px 0 var(--acnt-color);
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   color: var(--title-color);
   font-weight: 700;
   line-height: 82.5%;
 }
 
+/*Медиа запрос под 768px*/
 
 @media (max-width:768px) {
   .header__theme-menu {
@@ -294,34 +327,33 @@
     gap: 13px;
   }
 
-
-   .header__text {
+  .header__text {
     max-inline-size: 364px;
     max-block-size: 117px;
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
 
-  .reasons {
+  .section--why {
     grid-template-columns: 33% 67%;
     gap: 20px;
     padding-inline-end:20px;
   }
 
-  .concentration__content {
+  .section__grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding-block-start: 20px;
   }
 
-  .concentration .section__title {
+  .section__title--narrow {
     max-inline-size: 236px;
   }
   
-  .tips {
+  .section--solutions {
     display: grid;
     grid-template-columns: 35% 65%;
     padding-block-end: 80px;
@@ -334,7 +366,7 @@
   }
 }
 
-@media (max-width:375px) {
+@media (max-width:565px) {
  .header {
   padding: 10px;
 }
@@ -349,51 +381,46 @@
   max-block-size: 117px;
 }  
 
-.reasons {
-  margin: 0px 10px;
-  padding: 40px 0 0 0;
+.section {
+  padding: 40px 10px;
+}
+
+.section--why {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.concentration {
-  margin: 0 10px;
-  padding-block-start: 60px;
-  padding-inline-end: 0;
-  padding-block-end: 80px;
+.section--distractions {
+  padding-block-start: 50px;
+  padding-block-end: 50px;
 }
 
-.concentration .section__title {
+.section__title--narrow {
   min-inline-size: 355px;
 }
 
-.concentration__content {
+.section__grid {
   display: flex;
   flex-direction: column;
 }
 
-.tips {
-  margin: 0 10px;
+.section--solutions {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-block-end: 50px;
 }
 
-.gallery {
+.section--gallery {
   padding: 0 0 40px 0;
 }
 
-.gallery__title {
-  margin: 0 10px 10px 10px;
-}
-
-.gallery__content {
+.gallery {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0 10px;
 }
 
 .footer {
@@ -406,16 +433,27 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  .header__rec {
+  .decorative__element {
     margin: 10px;
   }
   
-  .decorated-zone::before {
+  .frame::before {
     margin: 10px;
   }
   
-  .decorated-zone::after {
+  .frame::after {
     block-size: 25px;
     margin: 10px;
   }
+}
+
+:root {
+  --title-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --sub-text-color: #000028;
+  --accent-color: #ff0070;
+  --font: 'IBM Plex mono';
+  --font-size: 18px;
+  --btn-color:#ff0070;
+  --backgroung-image: url(../images/cover-image-dark.png);
 }
