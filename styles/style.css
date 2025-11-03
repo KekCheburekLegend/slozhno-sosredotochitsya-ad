@@ -29,10 +29,7 @@
 }
 
 .header__theme-menu-button {
-<<<<<<< HEAD
   background-color: transparent;
-=======
->>>>>>> be0f649a1399b2f827b5921db26302c969900e97
   padding: 0 13px;
   color: var(--btn-color);
   text-align: center;
