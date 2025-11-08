@@ -290,6 +290,7 @@
 }
 
 .footer__title {
+  margin-top: 40px;
   text-shadow: 4px 4px 0 var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   color: var(--title-color);
