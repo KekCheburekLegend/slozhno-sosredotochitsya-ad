@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .page {
   padding-top: 20px;
   max-width: 1024px;
@@ -13,7 +18,7 @@
   background-repeat: no-repeat;
 }
 
-
+/* Остальной CSS код остается без изменений */
 .section__link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
@@ -30,7 +35,6 @@
 .section__link:focus-visible {
   border: 1px solid var(--text-color);
 }
-
 
 .decorative__element {
   position: absolute;
@@ -57,7 +61,6 @@
   fill: var(--accent-color);
   filter: drop-shadow(0px 0px 4px var(--accent-color));
 }
-
 
 .frame::before {
   position: absolute;
@@ -136,7 +139,6 @@
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   line-height: 83%;
-
 }
 
 .header__text {
@@ -148,7 +150,6 @@
   justify-self: end;
   align-self: center;
 }
-
 
 .section--why {
   display: grid;
@@ -401,20 +402,17 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-
   .header__text {
     margin-left: 10px;
     max-inline-size: 355px;
     margin-top: 45px;
   }
 
-
   .section--solutions {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
     padding-left: 10px;
-  
   } 
 
   .question {
@@ -430,7 +428,6 @@
     width: 376px;
   }
 
-
   .section__card {
     width: 350px;
   }
@@ -445,7 +442,6 @@
     grid-template-columns: 356px;
     grid-template-rows: repeat(5, 1fr);
   }
-
 
   .section__title--narrow {
     max-inline-size: 500px;
@@ -499,5 +495,3 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
-
-
