@@ -1,5 +1,5 @@
 .page {
-  padding-top: 10px;
+  padding-top: 20px;
   max-width: 1024px;
   margin: 0 auto;
   font-family: var(--font, monospace);
@@ -7,6 +7,10 @@
   font-weight: 400;
   line-height: 23.4px;
   background-color: var(--bg-color);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .section__text {
@@ -103,8 +107,9 @@
 }
 
 .header__theme-menu-button {
-  padding: 0 13px;
+  padding: 2px 13px 4px;
   background-color: transparent;
+  text-transform: lowercase;
   border: none;
   color: var(--btn-color);
   text-align: center;
@@ -157,7 +162,7 @@
   grid-template-areas: "quest stream"
   ". dof";
   margin-bottom: 40px;
-  padding: 60px 20px;
+  padding: 50px 20px;
 }
 
 .question {
