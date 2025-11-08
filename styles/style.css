@@ -103,7 +103,7 @@
 }
 
 .header__theme-menu-button {
-  padding: 2px 13px 4px;
+  padding: 0px 13px;
   background-color: transparent;
   text-transform: lowercase;
   border: none;
@@ -361,7 +361,7 @@
 
 @media (max-width: 400px) {
   .page {
-    padding: 10px 10px 0 10px;
+    padding: 10px 0 0 0px;
   }
 
   .header {
@@ -373,11 +373,11 @@
   }
 
   .frame::before {
-    margin: 0 3px;
+    margin: 0 10px;
   }
 
   .frame::after {
-    margin: 0;
+    margin: 10px;
   }
 
   .title-decor {
@@ -387,8 +387,8 @@
   .header__theme-menu {
     display: flex;
     justify-content: flex-end;
-    margin-right: 17px;
-    margin-top: 66px;
+    margin-right: 20px;
+    margin-top: 65px;
   }
 
   .header__theme-menu-list {
@@ -396,14 +396,14 @@
   }
 
   .header__title {
-    margin-left: -5px;
+    margin-left: 5px;
     margin-top: 70px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
 
   .header__text {
-    margin-left: 0px;
+    margin-left: 10px;
     max-inline-size: 355px;
     margin-top: 45px;
   }
@@ -412,25 +412,27 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    padding-left: 0px; 
-  }
+    padding-left: 10px; 
+  
+  } 
+
 
   .question {
-    width: 355px;
+    width: 350px;
   }
 
   .section--why {
     display: flex;
     flex-direction: column;
-    margin-top: 33px;
-    padding: 0px;
+    margin-top: -20px;
+    padding-left: 10px;
     gap: 20px;
-    width: 356px;
+    width: 376px;
   }
 
 
   .section__card {
-    width: 356px;
+    width: 350px;
   }
 
   .dof {
@@ -438,9 +440,9 @@
   }
 
   .section--distractions {
-    padding-top: 24px;
-    margin-left: 0px;
-    grid-template-columns: auto;
+    margin-top: -43px;
+    margin-left: 10px;
+    grid-template-columns: 356px;
     grid-template-rows: repeat(5, 1fr);
   }
 
@@ -450,7 +452,7 @@
   }
 
   .section__title--solution {
-    width: 356px;
+    width: 360px;
   }
   
   .section__tip {
@@ -472,8 +474,8 @@
 
   .section--gallery {
     margin-top: 50px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .gallery {
@@ -489,9 +491,11 @@
 
   .footer {
     max-height: 100vh;
+    margin-top: -30px;
   }
 
   .footer__title {
+    margin-bottom: 50px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
