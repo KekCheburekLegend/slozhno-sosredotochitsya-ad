@@ -1,4 +1,4 @@
-.body {
+body {
   margin: 0;
   padding: 0;
 }
@@ -413,11 +413,12 @@
     margin-top: 45px;
   }
 
+
   .section--solutions {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    padding-left: 10px; 
+    padding-left: 10px;
   
   } 
 
