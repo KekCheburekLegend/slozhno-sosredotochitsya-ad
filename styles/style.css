@@ -301,6 +301,7 @@ body {
 }
 
 @media (max-width: 769px) {
+
   .header {
     height: 1005px;
   }
@@ -361,8 +362,15 @@ body {
 }
 
 @media (max-width: 377px) {
+  * {
+    margin: 0;
+    padding: 0;
+    max-width: 370px;
+  }
   .page {
-    padding: 10px 0 0 0px;
+    padding: 10px 0 0 0;
+      overflow-x: hidden;
+      width: 100%;
   }
 
   .header {
@@ -383,6 +391,7 @@ body {
 
   .title-decor {
     width: 356px;
+    max-width: 100%;
   }
 
   .header__theme-menu {
@@ -413,10 +422,12 @@ body {
     flex-direction: column;
     margin-top: 50px;
     padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
   } 
 
   .question {
-    width: 350px;
+    width: 100%;
   }
 
   .section--why {
@@ -424,12 +435,14 @@ body {
     flex-direction: column;
     margin-top: -20px;
     padding-left: 10px;
+    padding-right: 10px;
     gap: 20px;
-    width: 376px;
+    width: 100%;
   }
 
   .section__card {
     width: 350px;
+    margin-right: 0;
   }
 
   .dof {
@@ -439,20 +452,24 @@ body {
   .section--distractions {
     margin-top: -43px;
     margin-left: 10px;
-    grid-template-columns: 356px;
+    margin-right: 10px;
+    width: auto;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(5, 1fr);
   }
 
   .section__title--narrow {
-    max-inline-size: 500px;
+    max-inline-size: 100%;
   }
 
   .section__title--solution {
     width: 360px;
+    max-width: 100%;
   }
   
   .section__tip {
     width: 356px;
+     max-width: 100%;
   }
 
   .reasons,
@@ -488,6 +505,7 @@ body {
   .footer {
     max-height: 100vh;
     margin-top: -30px;
+    width: 100%;
   }
 
   .footer__title {
