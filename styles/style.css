@@ -10,7 +10,6 @@ html, body {
 }
 
 .page {
-  padding-top: 20px;
   max-width: 1024px;
   margin: 0 auto;
   font-family: var(--font);
@@ -93,6 +92,7 @@ html, body {
 }
 
 .header {
+  padding-top: 20px;
   min-height: 100vh;
   display: grid;
   position: relative;
