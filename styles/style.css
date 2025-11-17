@@ -374,7 +374,7 @@ html, body {
     max-width: 370px;
   }
   .page {
-    padding: 10px 0 0 0;
+      margin: 10px 0 0 0;
       overflow-x: hidden;
       width: 100%;
   }
