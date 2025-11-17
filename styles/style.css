@@ -23,7 +23,6 @@ html, body {
   background-repeat: no-repeat;
 }
 
-/* Остальной CSS код остается без изменений */
 .section__link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
@@ -374,12 +373,12 @@ html, body {
     max-width: 370px;
   }
   .page {
-      margin: 10px 0 0 0;
       overflow-x: hidden;
       width: 100%;
   }
 
   .header {
+    margin-top: 10px;
     height: 100vh;
   }
 
